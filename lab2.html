@@ -20,13 +20,13 @@
 		minute = date.getMinutes();
 		return[year, month, day, hour, minutes];
 	}
-	function Normal() {
+	function PopUp() {
     		let dayValues = getInfo();
     		alert("Today's Date is: "+dayValues[1]+" "+dayValues[2]+", "+dayValues[0]);
     		alert("The time is: "+dayValues[3]+":"+dayValues[4]);
   	}
 
-  	function PopUp() {
+  	function Normal() {
     		let dayValues = getInfo();
     		document.querySelector("#dateOut").innerHTML=
          		"Today's Date is: "+dayValues[1]+" "+dayValues[2]+", "+dayValues[0]+"<br>"+
@@ -35,15 +35,18 @@
 </script>
 </head>
 <body>
-	<form name=inclass>
-		<input type=button name=counter value = "Date-Time in Alert Pop-Up" onclick="Normal();">
-	</form>
-	<form name=inclass>
-		<input type=button name=counter value = "Date-Time on Page" onclick="PopUp();">
-	</form>
+	<button id = "Pop" onclick="PopUp()">Date-Time in Alert Pop-up</button>
+	<button id = "Norm" onclick="Normal()">Date-Time on Page</button>
+	
 	<select id="Hours" size="1">
  	<option value="0">12 Hours</option>
  	<option value="1">24 Hours</option>
 	</select>
+	
+	<div id="dateOut">
+    	The time goes here.
+	</div>
+
+
 </body>
 </html>
