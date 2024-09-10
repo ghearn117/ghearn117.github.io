@@ -1,4 +1,4 @@
-function Lab1(){
+function labfile(){
 	var sum = 0;
 	var array = [];
 	for(var i = 0; i < 5; i++){
