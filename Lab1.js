@@ -15,5 +15,5 @@ function Lab1(){
 			greater.push(array[i]);
 		}
 	}
-	document.querySelector("#arrayOut").innerHTML="The array is:"+array+"<br>The mean is:"+mean+"<br>Greater:"+greater;
+	document.querySelector("#Lab1").innerHTML="The array is:"+array+"<br>The mean is:"+mean+"<br>Greater:"+greater;
 }
