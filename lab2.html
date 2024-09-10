@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Title>LAB 2</Title>
+<script>
+	function getInfo(){
+		var date = new Date;
+		year = date.getFullYear();
+
+		const months = ["January", "February", "March", "April",
+			"May", "June", "July", "August", "September", "October",
+			"November", "December"];
+	
+		month = months[date.getMonth()];
+		day = date.getDate();
+		hours12 = ( document.getElementById("Hours").selectedIndex==0 ?
+			true : false );
+		hour = date.getHours();
+		hour = (hours12 ? hour%12 : hour);
+		minute = date.getMinutes();
+		return[year, month, day, hour, minutes];
+	}
+	function Normal() {
+    		let dayValues = getInfo();
+    		alert("Today's Date is: "+dayValues[1]+" "+dayValues[2]+", "+dayValues[0]);
+    		alert("The time is: "+dayValues[3]+":"+dayValues[4]);
+  	}
+
+  	function PopUp() {
+    		let dayValues = getInfo();
+    		document.querySelector("#dateOut").innerHTML=
+         		"Today's Date is: "+dayValues[1]+" "+dayValues[2]+", "+dayValues[0]+"<br>"+
+         		"Tge time is: "+dayValues[3]+":"+dayValues[4];
+  	}
+</script>
+</head>
+<body>
+	<form name=inclass>
+		<input type=button name=counter value = "Date-Time in Alert Pop-Up" onclick="Normal();">
+	</form>
+	<form name=inclass>
+		<input type=button name=counter value = "Date-Time on Page" onclick="PopUp();">
+	</form>
+	<select id="Hours" size="1">
+ 	<option value="0">12 Hours</option>
+ 	<option value="1">24 Hours</option>
+	</select>
+</body>
+</html>
