@@ -27,7 +27,8 @@ function init() {
     // 1 - listener event for the mouse click
     // 3 - will later need to be updated in conjunction with whether the points are saved
     canvas.addEventListener("mousedown", function(event){
-       t  = vec2(2*event.clientX/canvas.width-1, 
+        if (!saveWork) points=[vec2(  0.00 ,  0.00 )];
+        t  = vec2(2*event.clientX/canvas.width-1, 
         2*(canvas.height-event.clientY)/canvas.height-1);
        points.push(t);
        render();
