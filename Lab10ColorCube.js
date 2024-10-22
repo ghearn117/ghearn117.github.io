@@ -69,6 +69,7 @@ function init()
     document.getElementById( "zButton" ).onclick = function () {
         axis = zAxis;
     };
+    document.getElementById("ButtonT").onclick = function(){flag = !flag;};
 
     render();
 }
@@ -117,7 +118,7 @@ function quad(a, b, c, d)
 
     for ( var i = 0; i < indices.length; ++i ) {
         positions.push( vertices[indices[i]] );
-        //colors.push( vertexColors[indices[i]] );
+        colors.push( vertexColors[indices[i]] );
 
         // for solid colored faces use
         colors.push(vertexColors[a]);
