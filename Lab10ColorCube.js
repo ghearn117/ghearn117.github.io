@@ -27,6 +27,18 @@ function init()
     if (!gl) alert("WebGL 2.0 isn't available");
 
     colorCube();
+    positions.push( vec4(0.0,0.0,0.0,1.0) );
+    colors.push( vec4(1.0,0.0,0.0,1.0) );
+    positions.push( vec4(1.0,0.0,0.0,1.0) );
+    colors.push( vec4(1.0,0.0,0.0,1.0) );
+    positions.push( vec4(0.0,0.0,0.0,1.0) );
+    colors.push( vec4(0.0,1.0,0.0,1.0) );
+    positions.push( vec4(0.0,1.0,0.0,1.0) );
+    colors.push( vec4(0.0,1.0,0.0,1.0) );
+    positions.push( vec4(0.0,0.0,0.0,1.0) );
+    colors.push( vec4(0.0,0.0,1.0,1.0) );
+    positions.push( vec4(0.0,0.0,1.0,1.0) );
+    colors.push( vec4(0.0,0.0,1.0,1.0) );
 
     gl.viewport(0, 0, canvas.width, canvas.height);
     gl.clearColor(1.0, 1.0, 1.0, 1.0);
