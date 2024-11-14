@@ -17,9 +17,9 @@ function init()
 
 // isoceles triangle
     points=[
-    vec4(  0.0, .5, 0.0, 1.0 ),
-    vec4(  .5, 0.0, 0.0, 1.0 ),
-    vec4(   1.0, 0.0, 0.0, 1.0 )
+    vec4(  0.0, 0.0, 0.0, 1.0 ),
+    vec4(  .5, -.5, 0.0, 1.0 ),
+    vec4(   -.5, -.5, 0.0, 1.0 )
     ];
 
     positionsArray.push(points[0]);
